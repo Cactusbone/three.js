@@ -2,7 +2,7 @@
   "name": "three",
   "version": "0.80.1",
   "description": "JavaScript 3D library",
-  "main": "build/three.js",
+  "main": "src/Three.js",
   "files": [
     "package.json",
     "LICENSE",
@@ -18,6 +18,18 @@
     "doc": "docs",
     "example": "examples",
     "test": "test"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
   },
   "scripts": {
     "build": "rollup -c",
